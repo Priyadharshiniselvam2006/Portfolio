@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MathVerse Portfolio</title>
+    <meta name="description" content="Interactive Mathematical Portfolio Experience - Where mathematical precision meets artistic expression. Explore the universe of calculated creativity." />
+    <link rel="stylesheet" href="../css/main.css" />
+   <link rel="icon" type="images/png"  href="/mathverse_portfolio/images/logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathverse8897back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary overflow-x-hidden">
+    <!-- Mathematical Background Canvas -->
+    <canvas id="mathematical-universe" class="fixed inset-0 w-full h-full z-0"></canvas>
+    
+    <!-- Particle System Overlay -->
+    <div id="particle-container" class="fixed inset-0 w-full h-full z-10 pointer-events-none"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 p-6">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
+                <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                    <path d="M16 2L20 10H28L22 16L26 24L16 20L6 24L10 16L4 10H12L16 2Z"/>
+                    <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                </svg>
+            </div>
+            
+          <!-- Mathematical Symbol Navigation -->
+<div class="hidden md:flex space-x-6">
+  <a href="about_theorem_integration_of_self.html"
+     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+     data-symbol="∫">
+    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∫</span>
+    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">About</span>
+  </a>
+
+  <a href="proficiencies_matrix_skills_visualization.html"
+     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+     data-symbol="Δ">
+    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Δ</span>
+    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Skills</span>
+  </a>
+
+  <a href="works_gallery_sum_of_projects.html"
+     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+     data-symbol="Σ">
+    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Σ</span>
+    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Works</span>
+  </a>
+
+  <a href="reach_me_portal_infinite_connections.html"
+     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+     data-symbol="∞">
+    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∞</span>
+    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Contact</span>
+  </a>
+</div>
+
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-surface/90 backdrop-blur-mathematical rounded-lg m-6 p-6 opacity-0 transform -translate-y-4 transition-complex pointer-events-none">
+            <div class="space-y-4">
+                <a href="about_theorem_integration_of_self.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">∫</span>
+                    <span>About Theorem</span>
+                </a>
+                <a href="proficiencies_matrix_skills_visualization.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">Δ</span>
+                    <span>Skill Visualization</span>
+                </a>
+                <a href="works_gallery_sum_of_projects.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">Σ</span>
+                    <span>Works Gallery</span>
+                </a>
+                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">∞</span>
+                    <span>Reach Me Portal</span>
+                </a>
+                <a href="mathematical_playground_hidden_laboratory.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">π</span>
+                    <span>Mathematical Playground</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Hero Section -->
+    <main class="relative z-20 min-h-screen flex items-center justify-center">
+        <div class="container mx-auto px-6 text-center">
+            <!-- Animated Name Display -->
+            <div class="mb-8"><br>
+               <h1 id="animated-name"
+    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-jetbrains font-bold text-transparent bg-clip-text bg-gradient-accent flex flex-wrap justify-center gap-x-1 leading-tight text-center">
+
+    <!-- Name: Priyadharshini -->
+    <span class="inline-block opacity-0 transform translate-y-8">P</span>
+    <span class="inline-block opacity-0 transform translate-y-8">r</span>
+    <span class="inline-block opacity-0 transform translate-y-8">i</span>
+    <span class="inline-block opacity-0 transform translate-y-8">y</span>
+    <span class="inline-block opacity-0 transform translate-y-8">a</span>
+    <span class="inline-block opacity-0 transform translate-y-8">d</span>
+    <span class="inline-block opacity-0 transform translate-y-8">h</span>
+    <span class="inline-block opacity-0 transform translate-y-8">a</span>
+    <span class="inline-block opacity-0 transform translate-y-8">r</span>
+    <span class="inline-block opacity-0 transform translate-y-8">s</span>
+    <span class="inline-block opacity-0 transform translate-y-8">h</span>
+    <span class="inline-block opacity-0 transform translate-y-8">i</span>
+    <span class="inline-block opacity-0 transform translate-y-8">n</span>
+    <span class="inline-block opacity-0 transform translate-y-8">i</span>
+                      <!-- Proper space before initial -->
+    <span class="inline-block mx-[0.5ch] opacity-0 transform translate-y-8">&nbsp;</span>
+    <span class="inline-block opacity-0 transform translate-y-8">S</span>
+</h1><br>
+
+                
+                <!-- Mathematical Equation Subtitle -->
+                <div class="text-xl md:text-2xl font-jetbrains text-text-secondary mb-2 opacity-0" id="equation-subtitle">
+                    <span class="text-accent">f(x)</span> = <span class="text-success">Curiosity</span> × <span class="text-warning">Self learning→∞</span> + <span class="text-accent">Creativity</span>
+                </div>
+            </div>
+            
+            <!-- Core Identity Statement -->
+            <div class="mb-12 opacity-0" id="identity-statement">
+                <h2 class="text-2xl md:text-4xl font-space-grotesk font-semibold mb-6 leading-tight">
+                    <span class="text-accent">Curious Mind.</span>
+                    <span class="text-success">Clean Learning.</span>
+                    <span class="text-warning">Calculated Creativity.</span>
+                </h2>
+                <p class="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
+                    Where mathematical precision meets artistic expression. Exploring the infinite possibilities 
+                    at the intersection of <span class="text-accent font-medium">mathematics</span>, 
+                    <span class="text-success font-medium">technology</span>, and 
+                    <span class="text-warning font-medium">creative innovation</span>.
+                </p>
+            </div>
+            
+            <!-- Interactive Mathematical Symbols -->
+            <div class="mb-16 opacity-0" id="interactive-symbols">
+                <div class="flex justify-center space-x-8 md:space-x-12 mb-8">
+                    <div class="symbol-container group cursor-pointer" data-equation="∫ f(x)dx = Knowledge">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-mathematical">
+                            <span class="text-2xl md:text-3xl font-jetbrains text-accent group-hover:scale-110 transition-mathematical">∫</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-mathematical">Integration</p>
+                    </div>
+                    
+                    <div class="symbol-container group cursor-pointer" data-equation="Δx → 0 = Precision">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-full flex items-center justify-center group-hover:bg-success/20 transition-mathematical">
+                            <span class="text-2xl md:text-3xl font-jetbrains text-success group-hover:scale-110 transition-mathematical">Δ</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-mathematical">Delta</p>
+                    </div>
+                    
+                    <div class="symbol-container group cursor-pointer" data-equation="Σ = Innovation">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-full flex items-center justify-center group-hover:bg-warning/20 transition-mathematical">
+                            <span class="text-2xl md:text-3xl font-jetbrains text-warning group-hover:scale-110 transition-mathematical">Σ</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-mathematical">Summation</p>
+                    </div>
+                    
+                    <div class="symbol-container group cursor-pointer" data-equation="∞ = Possibilities">
+                        <div class="w-16 h-16 md:w-20 md:h-20 mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-mathematical">
+                            <span class="text-2xl md:text-3xl font-jetbrains text-accent group-hover:scale-110 transition-mathematical">∞</span>
+                        </div>
+                        <p class="text-xs md:text-sm text-text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-mathematical">Infinity</p>
+                    </div>
+                </div>
+                
+                <!-- Dynamic Equation Display -->
+                <div id="equation-display" class="text-lg font-jetbrains text-accent opacity-0 transition-mathematical">
+                    Hover over symbols to reveal their mathematical meaning
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="opacity-0" id="cta-section">
+                <a href="about_theorem_integration_of_self.html" class="inline-flex items-center space-x-3 mathematical-glow bg-gradient-accent text-primary px-8 py-4 rounded-lg font-space-grotesk font-semibold text-lg hover:scale-105 transition-mathematical group">
+                    <span>Enter the Equation</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-mathematical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
+                
+                <!-- Secondary CTA -->
+                <div class="mt-6">
+                    <button id="easter-egg-trigger" class="text-text-secondary hover:text-accent transition-mathematical text-sm font-jetbrains">
+                        Press π for mathematical secrets
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Mathematical Facts -->
+        <!-- <div id="floating-facts" class="fixed bottom-6 right-6 z-30 opacity-0">
+            <div class="mathematical-glow bg-surface/80 backdrop-blur-mathematical rounded-lg p-4 max-w-xs">
+                <p class="text-sm text-text-secondary font-jetbrains" id="math-fact">
+                    Did you know? The golden ratio φ ≈ 1.618 appears throughout nature and art.
+                </p>
+            </div>
+        </div> -->
+    </main>
+    
+    <!-- Mathematical Background Equations -->
+    <div class="fixed inset-0 z-5 pointer-events-none overflow-hidden">
+        <div class="absolute top-20 left-10 text-6xl font-jetbrains text-accent/10 animate-float">∂f/∂x</div>
+        <div class="absolute top-40 right-20 text-4xl font-jetbrains text-success/10 animate-float" style="animation-delay: 1s;">∇²φ = 0</div>
+        <div class="absolute bottom-40 left-20 text-5xl font-jetbrains text-warning/10 animate-float" style="animation-delay: 2s;">e^(iπ) + 1 = 0</div>
+        <div class="absolute bottom-20 right-10 text-3xl font-jetbrains text-accent/10 animate-float" style="animation-delay: 0.5s;">∫₋∞^∞ e^(-x²) dx = √π</div>
+    </div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 z-50 bg-background flex items-center justify-center">
+        <div class="text-center">
+            <div class="mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-8">
+                <div class="text-4xl font-jetbrains text-accent mb-4 animate-mathematical">∑</div>
+                <p class="text-text-secondary font-jetbrains">Calculating creativity...</p>
+                <div class="mt-4 w-32 h-1 bg-surface rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-accent animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mathematical Universe Background
+        let scene, camera, renderer, particles;
+        let webglSupported = true;
+        
+        function checkWebGLSupport() {
+            try {
+                const canvas = document.createElement('canvas');
+                const context = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+                return !!context;
+            } catch (e) {
+                return false;
+            }
+        }
+        
+        function createFallbackBackground() {
+            const canvas = document.getElementById('mathematical-universe');
+            const ctx = canvas.getContext('2d');
+            
+            // Set canvas size
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            // Create animated 2D fallback
+            const particles = [];
+            for (let i = 0; i < 100; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+            
+            function animate2D() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                // Draw particles
+                particles.forEach(particle => {
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, 1, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(0, 212, 255, ${particle.alpha})`;
+                    ctx.fill();
+                    
+                    // Update position
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+                    
+                    // Wrap around screen
+                    if (particle.x < 0) particle.x = canvas.width;
+                    if (particle.x > canvas.width) particle.x = 0;
+                    if (particle.y < 0) particle.y = canvas.height;
+                    if (particle.y > canvas.height) particle.y = 0;
+                });
+                
+                requestAnimationFrame(animate2D);
+            }
+            
+            animate2D();
+        }
+        
+        function initMathematicalUniverse() {
+            // Check WebGL support first
+            if (!checkWebGLSupport()) {
+                console.warn('WebGL not supported, falling back to 2D canvas');
+                webglSupported = false;
+                createFallbackBackground();
+                return;
+            }
+            
+            const canvas = document.getElementById('mathematical-universe');
+            scene = new THREE.Scene();
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            
+            try {
+                // Try to create WebGL renderer with error handling
+                renderer = new THREE.WebGLRenderer({ 
+                    canvas: canvas, 
+                    alpha: true,
+                    antialias: false, // Disable for better compatibility
+                    powerPreference: "high-performance",
+                    failIfMajorPerformanceCaveat: false
+                });
+                
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); // Limit pixel ratio
+                
+                // Handle WebGL context lost
+                canvas.addEventListener('webglcontextlost', function(event) {
+                    event.preventDefault();
+                    console.warn('WebGL context lost, attempting to restore...');
+                    webglSupported = false;
+                    createFallbackBackground();
+                }, false);
+                
+                // Handle WebGL context restored
+                canvas.addEventListener('webglcontextrestored', function(event) {
+                    console.log('WebGL context restored');
+                    webglSupported = true;
+                    initMathematicalUniverse(); // Reinitialize
+                }, false);
+                
+                // Create particle system
+                const geometry = new THREE.BufferGeometry();
+                const particleCount = Math.min(1000, 500); // Reduce particle count for better performance
+                const positions = new Float32Array(particleCount * 3);
+                
+                for (let i = 0; i < particleCount * 3; i++) {
+                    positions[i] = (Math.random() - 0.5) * 100;
+                }
+                
+                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                
+                const material = new THREE.PointsMaterial({
+                    color: 0x00d4ff,
+                    size: 0.5,
+                    transparent: true,
+                    opacity: 0.6
+                });
+                
+                particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+                
+                camera.position.z = 50;
+                
+                animate();
+                
+            } catch (error) {
+                console.error('WebGL initialization failed:', error);
+                webglSupported = false;
+                createFallbackBackground();
+            }
+        }
+        
+        function animate() {
+            if (!webglSupported || !renderer) return;
+            
+            try {
+                requestAnimationFrame(animate);
+                
+                if (particles) {
+                    particles.rotation.x += 0.001;
+                    particles.rotation.y += 0.002;
+                }
+                
+                renderer.render(scene, camera);
+            } catch (error) {
+                console.error('WebGL render error:', error);
+                webglSupported = false;
+                createFallbackBackground();
+            }
+        }
+        
+        // GSAP Animations
+        function initAnimations() {
+            const tl = gsap.timeline();
+            
+            // Animate name letters
+            tl.to('#animated-name span', {
+                opacity: 1,
+                y: 0,
+                duration: 0.1,
+                stagger: 0.05,
+                ease: 'back.out(1.7)'
+            })
+            .to('#equation-subtitle', {
+                opacity: 1,
+                duration: 0.8,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('#identity-statement', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.3')
+            .to('#interactive-symbols', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.5')
+            .to('#cta-section', {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.out'
+            }, '-=0.3')
+            .to('#floating-facts', {
+                opacity: 1,
+                duration: 0.5,
+                ease: 'power2.out'
+            }, '-=0.2');
+        }
+        
+        // Interactive Symbol Hover Effects
+        function initSymbolInteractions() {
+            const symbols = document.querySelectorAll('.symbol-container');
+            const equationDisplay = document.getElementById('equation-display');
+            
+            symbols.forEach(symbol => {
+                symbol.addEventListener('mouseenter', () => {
+                    const equation = symbol.dataset.equation;
+                    equationDisplay.textContent = equation;
+                    equationDisplay.style.opacity = '1';
+                });
+                
+                symbol.addEventListener('mouseleave', () => {
+                    equationDisplay.style.opacity = '0';
+                    setTimeout(() => {
+                        equationDisplay.textContent = 'Hover over symbols to reveal their mathematical meaning';
+                    }, 300);
+                });
+            });
+        }
+        
+        // Mobile Menu Toggle
+        function initMobileMenu() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let isOpen = false;
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                isOpen = !isOpen;
+                
+                if (isOpen) {
+                    mobileMenu.style.pointerEvents = 'auto';
+                    gsap.to(mobileMenu, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 0.3,
+                        ease: 'power2.out'
+                    });
+                } else {
+                    gsap.to(mobileMenu, {
+                        opacity: 0,
+                        y: -16,
+                        duration: 0.3,
+                        ease: 'power2.in',
+                        onComplete: () => {
+                            mobileMenu.style.pointerEvents = 'none';
+                        }
+                    });
+                }
+            });
+        }
+        
+        // Easter Egg - π Key
+        function initEasterEgg() {
+            const facts = [
+                "π is approximately 3.14159265359...",
+                "e^(iπ) + 1 = 0 is Euler's identity",
+                "The golden ratio φ = (1 + √5) / 2",
+                "∞ is not a number, but a concept",
+                "The derivative of e^x is e^x",
+                "∫ 1/x dx = ln|x| + C"
+            ];
+            
+            let factIndex = 0;
+            const mathFact = document.getElementById('math-fact');
+            
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'π' || e.key === 'p') {
+                    factIndex = (factIndex + 1) % facts.length;
+                    mathFact.textContent = facts[factIndex];
+                    
+                    gsap.fromTo('#floating-facts', 
+                        { scale: 0.8, opacity: 0.5 },
+                        { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' }
+                    );
+                }
+            });
+            
+            document.getElementById('easter-egg-trigger').addEventListener('click', () => {
+                window.location.href = 'mathematical_playground_hidden_laboratory.html';
+            });
+        }
+        
+        // Resize Handler
+        function handleResize() {
+            if (webglSupported && camera && renderer) {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            } else {
+                // Handle 2D canvas resize
+                const canvas = document.getElementById('mathematical-universe');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+        }
+        
+        // Initialize Everything
+        window.addEventListener('load', () => {
+            // Hide loading screen
+            gsap.to('#loading-screen', {
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.out',
+                onComplete: () => {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }
+            });
+            
+            // Initialize components
+            initMathematicalUniverse();
+            initAnimations();
+            initSymbolInteractions();
+            initMobileMenu();
+            initEasterEgg();
+        });
+        
+        window.addEventListener('resize', handleResize);
+        
+       // Navigation hover effects
+document.querySelectorAll('.nav-symbol').forEach(symbol => {
+    symbol.addEventListener('mouseenter', () => {
+        gsap.to(symbol.querySelector('span:first-child'), {
+            scale: 1.2,
+            duration: 0.3,
+            ease: 'back.out(1.7)'
+        });
+    });
+
+    symbol.addEventListener('mouseleave', () => {
+        gsap.to(symbol.querySelector('span:first-child'), {
+            scale: 1,
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Set active nav based on current page
+document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('.nav-symbol');
+    const currentURL = window.location.href;
+
+    links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (currentURL.includes(href)) {
+            link.classList.add('active');
+            const symbolSpan = link.querySelector('span:first-child');
+            symbolSpan.classList.remove('text-text-secondary');
+            symbolSpan.classList.add('text-accent');
+        }
+    });
+});
+
+    </script>
+    
+    <style>
+        .nav-symbol {
+            @apply relative p-3 rounded-lg transition-mathematical hover:bg-surface/20;
+        }
+        
+        .symbol-container {
+            @apply transform transition-mathematical hover:scale-105;
+        }
+        
+        #mathematical-universe {
+            @apply opacity-30;
+        }
+        
+        @media (max-width: 768px) {
+            #mathematical-universe {
+                @apply opacity-20;
+            }
+        }
+    </style>
+</body>
+</html>
+
+<!-- Floating Mathematical Facts -->

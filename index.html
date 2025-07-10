@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Redirecting...</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="images/png"  href="/mathverse_portfolio/images/logo.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        
+        .redirect-container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .loading-text {
+            font-size: 24px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        .equation {
+            font-size: 18px;
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00f5ff, #ff00ff);
+            width: 0%;
+            animation: loading 3s ease-in-out forwards;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+    </style>
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathverse8897back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body>
+    <div class="redirect-container">
+        <div class="loading-text">Initializing Mathematical Portal...</div>
+        <div class="equation">f(x) = ∫ portfolio dx</div>
+        <div class="equation">lim(t→∞) loading = complete</div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="equation">Redirecting to dimensional hero space...</div>
+    </div>
+
+    <script>
+        // Mathematical loading animation with redirect
+        setTimeout(function() {
+            // Redirect to the landing page - the mathematical hero dimension
+            window.location.href = 'pages/landing_dimension_mathematical_hero.html';
+        }, 3000); // 3 second delay for loading effect
+        
+        // Optional: Add some mathematical flair to the loading
+        let equations = [
+            "∇ · portfolio = ∞",
+            "∂skills/∂time > 0",
+            "∑ projects = impressive",
+            "∫ creativity dx = innovation"
+        ];
+        
+        let equationElements = document.querySelectorAll('.equation');
+        let currentEquation = 0;
+        
+        setInterval(function() {
+            if (currentEquation < equations.length && equationElements.length > 2) {
+                equationElements[1].textContent = equations[currentEquation];
+                currentEquation = (currentEquation + 1) % equations.length;
+            }
+        }, 800);
+    </script>
+</body>
+</html>
