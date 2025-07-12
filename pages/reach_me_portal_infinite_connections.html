@@ -612,7 +612,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         //form submission
-  document.addEventListener("DOMContentLoaded", () => {
+    function initFormSubmission() {
   const form = document.getElementById('contact-form');
   const puzzleAnswer = document.getElementById('puzzle-answer');
   const puzzleFeedback = document.getElementById('puzzle-feedback');
@@ -631,9 +631,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       puzzleFeedback.classList.add('text-red-500');
       return;
     }
-
-    // Clear feedback and start submission
-    puzzleFeedback.textContent = '';
+   puzzleFeedback.textContent = '';
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
 
@@ -662,14 +660,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       statusDiv.classList.add('text-red-500');
     }
 
-    // Reset after delay
     setTimeout(() => {
       statusDiv.classList.add('hidden');
       submitBtn.innerHTML = originalText;
       submitBtn.disabled = false;
     }, 3000);
   });
-});
+}
 
 
 
