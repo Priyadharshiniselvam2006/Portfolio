@@ -6,38 +6,14 @@
     <title>∞ Reach Me Portal</title>
     <meta name="description" content="Connect with Priyadharshini through an interactive mathematical portal. Explore infinite possibilities for collaboration in academic research, technical opportunities, and creative projects." />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="icon" type="images/png"  href="/images/logo.png">
+    <link rel="icon" type="images/png"  href="/mathverse_portfolio/images/logo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J4B9KYGK3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6J4B9KYGK3');
-</script>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXL5MJQV');</script>
-<!-- End Google Tag Manager -->
-
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathverse8897back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
 </head>
 <body class="bg-background text-text-primary overflow-x-hidden">
-
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXL5MJQV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <!-- Mathematical Background Canvas -->
     <canvas id="mobius-universe" class="fixed inset-0 w-full h-full z-0"></canvas>
     
@@ -88,7 +64,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
 </div>
 
-           <!-- Mobile Menu Button  -->
+            
+            <!-- Mobile Menu Button -->
             <button id="mobile-menu-btn" class="md:hidden mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
                 <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -99,10 +76,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-surface/90 backdrop-blur-mathematical rounded-lg m-6 p-6 opacity-0 transform -translate-y-4 transition-complex pointer-events-none">
             <div class="space-y-4">
-                <a href="landing_dimension_mathematical_hero.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
-                    <span class="text-xl font-jetbrains">∫</span>
-                    <span>Home</span>
-                </a>
                 <a href="about_theorem_integration_of_self.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∫</span>
                     <span>About Theorem</span>
@@ -111,11 +84,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="text-xl font-jetbrains">Δ</span>
                     <span>Skill Visualization</span>
                 </a>
-                <a href="works_gallery_sum_of_projects.html" class="flex items-center space-x-3 text-accent">
+                <a href="works_gallery_sum_of_projects.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">Σ</span>
                     <span>Works Gallery</span>
                 </a>
-                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-accent">
                     <span class="text-xl font-jetbrains">∞</span>
                     <span>Reach Me Portal</span>
                 </a>
@@ -612,25 +585,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         //form submission
-   
+
 function initFormSubmission() {
   const form = document.getElementById('contact-form');
   const puzzleAnswer = document.getElementById('puzzle-answer');
   const puzzleFeedback = document.getElementById('puzzle-feedback');
   const submitBtn = document.getElementById('submit-btn');
   const statusDiv = document.querySelector('.form-status');
-  const correctAnswer = 7 * 8 + 4;
 
-  if (!form || !submitBtn) return;
+  if (!form || !puzzleAnswer || !submitBtn || !puzzleFeedback || !statusDiv) {
+    console.error("One or more elements not found in DOM.");
+    return;
+  }
 
+  const correctAnswer = 7 * 8 + 4; // 60
   const originalText = submitBtn.innerHTML;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const answer = parseInt(puzzleAnswer.value.trim());
-
-    // ✅ Verify answer
     if (isNaN(answer) || answer !== correctAnswer) {
       puzzleFeedback.textContent = '❌ Incorrect answer. Try again!';
       puzzleFeedback.classList.remove('text-green-500');
@@ -638,9 +612,8 @@ function initFormSubmission() {
       return;
     }
 
-    // ✅ Begin submission
     puzzleFeedback.textContent = '';
-    submitBtn.innerHTML = '<span>Sending...</span>';
+    submitBtn.innerHTML = 'Sending...';
     submitBtn.disabled = true;
 
     const formData = new FormData(form);
@@ -654,14 +627,15 @@ function initFormSubmission() {
 
       if (response.ok) {
         form.reset();
+        puzzleFeedback.textContent = '';
         statusDiv.textContent = '✅ Message sent successfully!';
         statusDiv.classList.remove('hidden', 'text-red-500');
         statusDiv.classList.add('text-green-500');
-        submitBtn.innerHTML = '<span>Sent!</span>';
+        submitBtn.innerHTML = 'Sent!';
       } else {
-        throw new Error("Formspree submission failed");
+        throw new Error("Failed");
       }
-    } catch (error) {
+    } catch (err) {
       statusDiv.textContent = '❌ Failed to send. Please try again.';
       statusDiv.classList.remove('hidden', 'text-green-500');
       statusDiv.classList.add('text-red-500');
@@ -675,11 +649,8 @@ function initFormSubmission() {
   });
 }
 
-// ✅ Safely initialize after DOM is fully ready
-window.addEventListener("DOMContentLoaded", () => {
-  initFormSubmission();
-});
-</script>
+// ⏳ Run after DOM is fully loaded
+window.addEventListener("DOMContentLoaded", initFormSubmission);
 
 
 
@@ -716,7 +687,7 @@ window.addEventListener("DOMContentLoaded", () => {
             });
         }
         
-      // Mobile Menu Toggle
+        // Mobile Menu Toggle
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -778,7 +749,7 @@ window.addEventListener("DOMContentLoaded", () => {
         
         window.addEventListener('resize', handleResize);
         
-         // Navigation hover effects
+       // Navigation hover effects
 document.querySelectorAll('.nav-symbol').forEach(symbol => {
     symbol.addEventListener('mouseenter', () => {
         gsap.to(symbol.querySelector('span:first-child'), {
