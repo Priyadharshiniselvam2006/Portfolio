@@ -64,8 +64,7 @@
   </a>
 </div>
 
-            
-            <!-- Mobile Menu Button -->
+           <!-- Mobile Menu Button  -->
             <button id="mobile-menu-btn" class="md:hidden mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
                 <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -76,6 +75,10 @@
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-surface/90 backdrop-blur-mathematical rounded-lg m-6 p-6 opacity-0 transform -translate-y-4 transition-complex pointer-events-none">
             <div class="space-y-4">
+                <a href="landing_dimension_mathematical_hero.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                    <span class="text-xl font-jetbrains">∫</span>
+                    <span>Home</span>
+                </a>
                 <a href="about_theorem_integration_of_self.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∫</span>
                     <span>About Theorem</span>
@@ -84,11 +87,11 @@
                     <span class="text-xl font-jetbrains">Δ</span>
                     <span>Skill Visualization</span>
                 </a>
-                <a href="works_gallery_sum_of_projects.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="works_gallery_sum_of_projects.html" class="flex items-center space-x-3 text-accent">
                     <span class="text-xl font-jetbrains">Σ</span>
                     <span>Works Gallery</span>
                 </a>
-                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-accent">
+                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∞</span>
                     <span>Reach Me Portal</span>
                 </a>
@@ -678,7 +681,7 @@
             });
         }
         
-        // Mobile Menu Toggle
+      // Mobile Menu Toggle
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -740,7 +743,7 @@
         
         window.addEventListener('resize', handleResize);
         
-       // Navigation hover effects
+         // Navigation hover effects
 document.querySelectorAll('.nav-symbol').forEach(symbol => {
     symbol.addEventListener('mouseenter', () => {
         gsap.to(symbol.querySelector('span:first-child'), {
