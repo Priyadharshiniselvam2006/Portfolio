@@ -612,26 +612,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         //form submission
-    function initFormSubmission() {
+   
+function initFormSubmission() {
   const form = document.getElementById('contact-form');
   const puzzleAnswer = document.getElementById('puzzle-answer');
   const puzzleFeedback = document.getElementById('puzzle-feedback');
   const submitBtn = document.getElementById('submit-btn');
   const statusDiv = document.querySelector('.form-status');
-  const correctAnswer = 7 * 8 + 4; 
+  const correctAnswer = 7 * 8 + 4;
+
+  if (!form || !submitBtn) return;
+
   const originalText = submitBtn.innerHTML;
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const answer = parseInt(puzzleAnswer.value.trim());
+
+    // ✅ Verify answer
     if (isNaN(answer) || answer !== correctAnswer) {
       puzzleFeedback.textContent = '❌ Incorrect answer. Try again!';
       puzzleFeedback.classList.remove('text-green-500');
       puzzleFeedback.classList.add('text-red-500');
       return;
     }
-   puzzleFeedback.textContent = '';
+
+    // ✅ Begin submission
+    puzzleFeedback.textContent = '';
     submitBtn.innerHTML = '<span>Sending...</span>';
     submitBtn.disabled = true;
 
@@ -646,7 +654,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       if (response.ok) {
         form.reset();
-        puzzleAnswer.value = '';
         statusDiv.textContent = '✅ Message sent successfully!';
         statusDiv.classList.remove('hidden', 'text-red-500');
         statusDiv.classList.add('text-green-500');
@@ -667,6 +674,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }, 3000);
   });
 }
+
+// ✅ Safely initialize after DOM is fully ready
+window.addEventListener("DOMContentLoaded", () => {
+  initFormSubmission();
+});
+</script>
+
 
 
 
