@@ -7,6 +7,7 @@
     <meta name="description" content="Interactive mathematical visualization of technical abilities through radar charts and mathematical models. Explore programming languages, mathematical foundations, and creative technologies." />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="icon" type="images/png"  href="/images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
@@ -148,63 +149,72 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
             </div>
         </section>
-        
-        <!-- Skills Overview Dashboard -->
-        <section class="container mx-auto px-6 mb-20">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-                <!-- Programming Languages -->
-                <div class="skill-category mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-6 hover:bg-surface/40 transition-mathematical cursor-pointer" data-category="programming">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-jetbrains text-accent">Programming</h3>
-                        <span class="text-2xl font-jetbrains text-accent">∇</span>
-                    </div>
-                    <div class="text-3xl font-jetbrains text-success mb-2">92%</div>
-                    <p class="text-sm text-text-secondary">Languages & Frameworks</p>
-                    <div class="mt-4 h-2 bg-surface rounded-full overflow-hidden">
-                        <div class="h-full bg-gradient-accent animate-pulse" style="width: 92%"></div>
-                    </div>
-                </div>
-                
-                <!-- Mathematical Foundations -->
-                <div class="skill-category mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-6 hover:bg-surface/40 transition-mathematical cursor-pointer" data-category="mathematics">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-jetbrains text-success">Mathematics</h3>
-                        <span class="text-2xl font-jetbrains text-success">∂</span>
-                    </div>
-                    <div class="text-3xl font-jetbrains text-success mb-2">96%</div>
-                    <p class="text-sm text-text-secondary">Theoretical Foundations</p>
-                    <div class="mt-4 h-2 bg-surface rounded-full overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-success to-accent animate-pulse" style="width: 96%"></div>
-                    </div>
-                </div>
-                
-                <!-- Creative Technologies -->
-                <div class="skill-category mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-6 hover:bg-surface/40 transition-mathematical cursor-pointer" data-category="creative">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-jetbrains text-warning">Creative Tech</h3>
-                        <span class="text-2xl font-jetbrains text-warning">∮</span>
-                    </div>
-                    <div class="text-3xl font-jetbrains text-warning mb-2">88%</div>
-                    <p class="text-sm text-text-secondary">Visualization & Design</p>
-                    <div class="mt-4 h-2 bg-surface rounded-full overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-warning to-accent animate-pulse" style="width: 88%"></div>
-                    </div>
-                </div>
-                
-                <!-- Problem Solving -->
-                <div class="skill-category mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-6 hover:bg-surface/40 transition-mathematical cursor-pointer" data-category="problem-solving">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 class="text-xl font-jetbrains text-accent">Problem Solving</h3>
-                        <span class="text-2xl font-jetbrains text-accent">∴</span>
-                    </div>
-                    <div class="text-3xl font-jetbrains text-accent mb-2">94%</div>
-                    <p class="text-sm text-text-secondary">Algorithm Design</p>
-                    <div class="mt-4 h-2 bg-surface rounded-full overflow-hidden">
-                        <div class="h-full bg-gradient-accent animate-pulse" style="width: 94%"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+   
+<!-- Skills Overview Dashboard -->
+<section class="w-full py-20 bg-transparent">
+  <div class="container max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+      <!-- Skill Card Template -->
+       <div class="bg-[#0f172a]/80 border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Programming</h3>
+            <p class="text-xs text-gray-400 mt-1">Languages & Frameworks</p>
+          </div>
+          <div class="text-cyan-400 text-lg font-bold">92%</div>
+        </div>
+        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-green-400 to-green-250 transition-all duration-700 ease-in-out" style="width: 78%"></div>
+        </div>
+      </div>
+
+       <!-- Mathematics Card -->
+      <div class="bg-[#0f172a]/80 border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Mathematics</h3>
+            <p class="text-xs text-gray-400 mt-1">Theoretical Foundations</p>
+          </div>
+          <div class="text-emerald-400 text-lg font-bold">96%</div>
+        </div>
+        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+        <div class="h-full bg-gradient-to-r from-blue-400 to-blue-350 transition-all duration-700 ease-in-out" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="bg-[#0f172a]/80 border border-white/10 rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Creative Tech</h3>
+            <p class="text-xs text-gray-400 mt-1">Visualization & Design</p>
+          </div>
+          <div class="text-yellow-400 text-lg font-bold">88%</div>
+        </div>
+        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-yellow-400 to-orange-300 transition-all duration-700 ease-in-out" style="width: 88%"></div>
+        </div>
+      </div>
+
+      <div class="bg-[#0f172a]/80 border border-white/10 rounded-xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-lg font-semibold text-white">Problem Solving</h3>
+            <p class="text-xs text-gray-400 mt-1">Algorithm Design</p>
+          </div>
+          <div class="text-indigo-400 text-lg font-bold">94%</div>
+        </div>
+        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-r from-pink-400 to-blue-150 transition-all duration-700 ease-in-out" style="width: 94%"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
         
         <!-- Interactive Radar Chart -->
         <section class="container mx-auto px-6 mb-20">
@@ -461,7 +471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
         
-        <!-- Mathematical Facts Sidebar -->
+        <!-- Mathematical Facts Sidebar
         <div id="math-facts-sidebar" class="fixed right-6 top-1/2 transform -translate-y-1/2 z-30 opacity-0 transition-mathematical">
             <div class="mathematical-glow bg-surface/80 backdrop-blur-mathematical rounded-lg p-4 max-w-xs">
                 <h4 class="text-sm font-jetbrains text-accent mb-2">Mathematical Insight</h4>
@@ -470,7 +480,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </p>
             </div>
         </div>
-    </main>
+    </main> -->
     
     <!-- Mathematical Background Equations -->
     <div class="fixed inset-0 z-5 pointer-events-none overflow-hidden">
@@ -1053,28 +1063,28 @@ const fragmentShaderSource = \`
         }
         
         // Mathematical Facts
-        function initMathematicalFacts() {
-            const facts = [
-                "The derivative ∂f/∂x represents the rate of skill improvement over time",
-                "Matrix operations in linear algebra power modern machine learning algorithms",
-                "The integral ∫ represents the accumulation of knowledge and experience",
-                "Gradient descent optimization mirrors the learning process in skill development",
-                "Statistical distributions help model uncertainty in complex problem-solving",
-                "Graph theory algorithms optimize network structures and data relationships"
-            ];
+        // function initMathematicalFacts() {
+        //     const facts = [
+        //         "The derivative ∂f/∂x represents the rate of skill improvement over time",
+        //         "Matrix operations in linear algebra power modern machine learning algorithms",
+        //         "The integral ∫ represents the accumulation of knowledge and experience",
+        //         "Gradient descent optimization mirrors the learning process in skill development",
+        //         "Statistical distributions help model uncertainty in complex problem-solving",
+        //         "Graph theory algorithms optimize network structures and data relationships"
+        //     ];
             
-            let factIndex = 0;
-            const mathFact = document.getElementById('current-math-fact');
-            const sidebar = document.getElementById('math-facts-sidebar');
+        //     let factIndex = 0;
+        //     const mathFact = document.getElementById('current-math-fact');
+        //     const sidebar = document.getElementById('math-facts-sidebar');
             
             // Show sidebar after page load
-            setTimeout(() => {
-                gsap.to(sidebar, {
-                    opacity: 1,
-                    duration: 0.5,
-                    ease: 'power2.out'
-                });
-            }, 2000);
+            // setTimeout(() => {
+            //     gsap.to(sidebar, {
+            //         opacity: 1,
+            //         duration: 0.5,
+            //         ease: 'power2.out'
+            //     });
+            // }, 2000);
             
             // Cycle through facts
             setInterval(() => {
@@ -1093,7 +1103,7 @@ const fragmentShaderSource = \`
                     window.location.href = 'mathematical_playground_hidden_laboratory.html';
                 }
             });
-        }
+        
         
         // Resize Handler
         function handleResize() {
@@ -1103,7 +1113,7 @@ const fragmentShaderSource = \`
         }
         
         // Initialize Everything
-        window.addEventListener('load', () => {
+       window.addEventListener("DOMContentLoaded", () => {
             // Hide loading screen
             gsap.to('#loading-screen', {
                 opacity: 0,
@@ -1122,26 +1132,39 @@ const fragmentShaderSource = \`
             initMathematicalFacts();
             
             // Animate page elements
-            gsap.from('.skill-category', {
-                opacity: 0,
-                y: 30,
-                duration: 0.8,
-                stagger: 0.1,
-                ease: 'power2.out',
-                delay: 0.5
-            });
             
-            gsap.from('.skill-card', {
-                opacity: 0,
-                scale: 0.9,
-                duration: 0.6,
-                stagger: 0.05,
-                ease: 'back.out(1.7)',
-                delay: 1
-            });
-        });
-        
-        window.addEventListener('resize', handleResize);
+
+    // Animate skill cards on load
+    gsap.from('.skill-category', {
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  stagger: 0.1,
+  ease: 'power2.out',
+  delay: 0.3
+});
+
+
+    // Animate optional `.skill-card` class only if used
+    const cards = document.querySelectorAll('.skill-card');
+    if (cards.length > 0) {
+      gsap.from(cards, {
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.6,
+        stagger: 0.05,
+        ease: 'back.out(1.7)',
+        delay: 0.6
+      });
+    }
+  });
+
+  // Resize handler (if you're using it elsewhere)
+  function handleResize() {
+
+  }
+
+  window.addEventListener('resize', handleResize);
         
        // Navigation hover effects
 document.querySelectorAll('.nav-symbol').forEach(symbol => {
