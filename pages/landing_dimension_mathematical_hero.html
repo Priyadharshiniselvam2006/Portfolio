@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="/public/favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
     
-    <link rel="manifest" href="/public/favicon/site.webmanifest" />
+    <link rel="manifest" href="/public/favicon/site.webmanifest"  crossorigin="use-credentials"/>
    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -42,6 +42,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathverse8897back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
 </head>
+
 <body class="bg-background text-text-primary overflow-x-hidden">
 
     <!-- Google Tag Manager (noscript) -->
@@ -134,54 +135,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
     
     <!-- Main Hero Section -->
-    <main class="relative z-20 min-h-screen flex items-center justify-center">
-        <div class="container mx-auto px-6 text-center">
-            <!-- Animated Name Display -->
-            <div class="mb-8"><br>
-               <h1 id="animated-name"
-    class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-jetbrains font-bold text-transparent bg-clip-text bg-gradient-accent flex flex-wrap justify-center gap-x-1 leading-tight text-center">
+<main class="relative z-20 min-h-screen flex items-center justify-center">
+  <div class="container mx-auto px-6 relative">
 
-    <!-- Name: Priyadharshini -->
-    <span class="inline-block opacity-0 transform translate-y-8">P</span>
-    <span class="inline-block opacity-0 transform translate-y-8">r</span>
-    <span class="inline-block opacity-0 transform translate-y-8">i</span>
-    <span class="inline-block opacity-0 transform translate-y-8">y</span>
-    <span class="inline-block opacity-0 transform translate-y-8">a</span>
-    <span class="inline-block opacity-0 transform translate-y-8">d</span>
-    <span class="inline-block opacity-0 transform translate-y-8">h</span>
-    <span class="inline-block opacity-0 transform translate-y-8">a</span>
-    <span class="inline-block opacity-0 transform translate-y-8">r</span>
-    <span class="inline-block opacity-0 transform translate-y-8">s</span>
-    <span class="inline-block opacity-0 transform translate-y-8">h</span>
-    <span class="inline-block opacity-0 transform translate-y-8">i</span>
-    <span class="inline-block opacity-0 transform translate-y-8">n</span>
-    <span class="inline-block opacity-0 transform translate-y-8">i</span>
-                      <!-- Proper space before initial -->
-    <span class="inline-block mx-[0.5ch] opacity-0 transform translate-y-8">&nbsp;</span>
-    <span class="inline-block opacity-0 transform translate-y-8">S</span>
-</h1><br>
+    <!-- Wrapper with header gap -->
+    <div class="flex flex-col items-center text-center pt-90 sm:pt-44 md:pt-52 lg:pt-64 xl:pt-72 relative z-20">
+      
+      <!-- Name & Title -->
+      <div class="mb-8 " >
+        <h1 id="animated-name"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-jetbrains font-bold text-transparent bg-clip-text bg-gradient-accent leading-tight mb-3">
+          Priyadharshini S
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl font-jetbrains text-accent">
+          B.Sc. Mathematics
+        </p>
+      
 
-                
-                <!-- Mathematical Equation Subtitle -->
-                <div class="text-xl md:text-2xl font-jetbrains text-text-secondary mb-2 opacity-0" id="equation-subtitle">
-                    <span class="text-accent">f(x)</span> = <span class="text-success">Curiosity</span> × <span class="text-warning">Self learning→∞</span> + <span class="text-accent">Creativity</span>
-                </div>
-            </div>
-            
-            <!-- Core Identity Statement -->
-            <div class="mb-12 opacity-0" id="identity-statement">
-                <h2 class="text-2xl md:text-4xl font-space-grotesk font-semibold mb-6 leading-tight">
-                    <span class="text-accent">Curious Mind.</span>
-                    <span class="text-success">Clean Learning.</span>
-                    <span class="text-warning">Calculated Creativity.</span>
-                </h2>
-                <p class="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-                    Where mathematical precision meets artistic expression. Exploring the infinite possibilities 
-                    at the intersection of <span class="text-accent font-medium">mathematics</span>, 
-                    <span class="text-success font-medium">technology</span>, and 
-                    <span class="text-warning font-medium">creative innovation</span>.
-                </p>
-            </div>
+      <!-- Equation Subtitle -->
+      <div class="text-lg md:text-xl font-jetbrains text-text-secondary mt-4 mb-8">
+        <span class="text-accent">f(x)</span> = <span class="text-success">Curiosity</span> × 
+        <span class="text-warning">Self learning→∞</span> + <span class="text-accent">Creativity</span>
+      </div>
+
+      <!-- Core Identity Statement -->
+      <div class="max-w-3xl px-4">
+        <h2 class="text-2xl md:text-4xl font-space-grotesk font-semibold mb-6 leading-tight">
+          <span class="text-accent">Curious Mind.</span>
+          <span class="text-success">Clean Learning.</span>
+          <span class="text-warning">Calculated Creativity.</span>
+        </h2>
+        <p class="text-lg md:text-xl text-text-secondary leading-relaxed">
+          Where mathematical precision meets artistic expression. Exploring the infinite possibilities 
+          at the intersection of <span class="text-accent font-medium">mathematics</span>, 
+          <span class="text-success font-medium">technology</span>, and 
+          <span class="text-warning font-medium">creative innovation</span>.
+        </p>
+      </div>
+    
+
+    <!-- Responsive Profile Image -->
+    <div class="absolute inset-0 flex justify-center items-center pointer-events-none">
+     <img src="/images/pic.png" alt="Profile"
+    class="profile-img w-[200px] sm:w-[240px] md:w-[300px] lg:w-[380px] xl:w-[420px] h-auto object-contain opacity-80">
+    </div>
+
             
             <!-- Interactive Mathematical Symbols -->
             <div class="mb-16 opacity-0" id="interactive-symbols">
@@ -238,15 +236,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-        
-        <!-- Floating Mathematical Facts -->
-        <!-- <div id="floating-facts" class="fixed bottom-6 right-6 z-30 opacity-0">
-            <div class="mathematical-glow bg-surface/80 backdrop-blur-mathematical rounded-lg p-4 max-w-xs">
-                <p class="text-sm text-text-secondary font-jetbrains" id="math-fact">
-                    Did you know? The golden ratio φ ≈ 1.618 appears throughout nature and art.
-                </p>
-            </div>
-        </div> -->
+    </div>
+    </div>   
     </main>
     
     <!-- Mathematical Background Equations -->
@@ -304,7 +295,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     alpha: Math.random() * 0.5 + 0.1
                 });
             }
-            
+
+            //name
+
+            document.addEventListener("DOMContentLoaded", () => {
+              const nameEl = document.getElementById("animated-name");
+               const text = nameEl.textContent.trim();
+                 nameEl.innerHTML = '';
+
+                   text.split('').forEach(char => {
+                      const span = document.createElement('span');
+                         span.textContent = char === ' ' ? '\u00A0' : char;
+                          span.className = "inline-block opacity-0 transform translate-y-8 transition-all duration-500";
+                           nameEl.appendChild(span);
+       
+                        });
+
+                const letters = nameEl.querySelectorAll('span');
+                  letters.forEach((span, i) => {
+                    setTimeout(() => {
+                      span.classList.remove('opacity-0', 'translate-y-8');
+                               span.classList.add('opacity-100', 'translate-y-0');
+                      }, i * 100);
+                 });
+
+                 setTimeout(() => {
+                  document.getElementById('subtitle').classList.remove('opacity-0');
+                    }, letters.length * 100 + 300);
+                });
+
+        
             function animate2D() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 
@@ -516,35 +536,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
         
         // Easter Egg - π Key
-        function initEasterEgg() {
-            const facts = [
-                "π is approximately 3.14159265359...",
-                "e^(iπ) + 1 = 0 is Euler's identity",
-                "The golden ratio φ = (1 + √5) / 2",
-                "∞ is not a number, but a concept",
-                "The derivative of e^x is e^x",
-                "∫ 1/x dx = ln|x| + C"
-            ];
+        // function initEasterEgg() {
+        //     const facts = [
+        //         "π is approximately 3.14159265359...",
+        //         "e^(iπ) + 1 = 0 is Euler's identity",
+        //         "The golden ratio φ = (1 + √5) / 2",
+        //         "∞ is not a number, but a concept",
+        //         "The derivative of e^x is e^x",
+        //         "∫ 1/x dx = ln|x| + C"
+        //     ];
             
-            let factIndex = 0;
-            const mathFact = document.getElementById('math-fact');
+        //     let factIndex = 0;
+        //     const mathFact = document.getElementById('math-fact');
             
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'π' || e.key === 'p') {
-                    factIndex = (factIndex + 1) % facts.length;
-                    mathFact.textContent = facts[factIndex];
+        //     document.addEventListener('keydown', (e) => {
+        //         if (e.key === 'π' || e.key === 'p') {
+        //             factIndex = (factIndex + 1) % facts.length;
+        //             mathFact.textContent = facts[factIndex];
                     
-                    gsap.fromTo('#floating-facts', 
-                        { scale: 0.8, opacity: 0.5 },
-                        { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' }
-                    );
-                }
-            });
+        //             gsap.fromTo('#floating-facts', 
+        //                 { scale: 0.8, opacity: 0.5 },
+        //                 { scale: 1, opacity: 1, duration: 0.3, ease: 'back.out(1.7)' }
+        //             );
+        //         }
+        //     });
             
-            document.getElementById('easter-egg-trigger').addEventListener('click', () => {
-                window.location.href = 'mathematical_playground_hidden_laboratory.html';
-            });
-        }
+        //     document.getElementById('easter-egg-trigger').addEventListener('click', () => {
+        //         window.location.href = 'mathematical_playground_hidden_laboratory.html';
+        //     });
+        // }
         
         // Resize Handler
         function handleResize() {
@@ -577,7 +597,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             initAnimations();
             initSymbolInteractions();
             initMobileMenu();
-            initEasterEgg();
+            
+
         });
         
         window.addEventListener('resize', handleResize);
@@ -637,6 +658,37 @@ document.addEventListener("DOMContentLoaded", function () {
                 @apply opacity-20;
             }
         }
+
+       @media (max-width: 767px) {
+    .profile-img {
+      position: relative;
+      margin: 0 auto;
+      filter: blur(8px) drop-shadow(0 0 30px rgba(0,0,0,0.3));
+      opacity: 0.5;
+      transform: none;
+    }
+  }
+
+  /* ✅ Desktop (from 768px): Right-center large image with fade blend */
+  @media (min-width: 768px) {
+    .profile-img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      filter: drop-shadow(0 0 50px rgba(0,0,0,0.4));
+      opacity: 0.8;
+      mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      mask-position: center;
+      -webkit-mask-position: center;
+      mask-size: cover;
+      -webkit-mask-size: cover;
+    }
+  }
+
     </style>
 </body>
 </html>
