@@ -4,9 +4,6 @@
 
 An interactive, mathematically-themed portfolio website showcasing the intersection of mathematics, technology, and creative innovation. Built with modern web technologies and featuring stunning 3D visualizations powered by Three.js.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://priyadharshiniselvam2006.github.io/Portfolio/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
 ---
 
 ## ✨ Features
