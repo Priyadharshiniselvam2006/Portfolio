@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Σ Works Gallery</title>
-    <meta name="description" content="Portfolio pieces presented as mathematical theorems - where mathematics meets technology and creative problem-solving through interactive demonstrations." />
+    <meta name="description"
+        content="Portfolio pieces presented as mathematical theorems - where mathematics meets technology and creative problem-solving through interactive demonstrations." />
     <link rel="stylesheet" href="../css/main.css" />
-    <link rel="icon" type="images/png"  href="/images/logo.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/logo.png" sizes="32x32">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
@@ -16,100 +18,113 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J4B9KYGK3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6J4B9KYGK3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-6J4B9KYGK3');
-</script>
+        gtag('config', 'G-6J4B9KYGK3');
+    </script>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KXL5MJQV');</script>
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KXL5MJQV');</script>
+    <!-- End Google Tag Manager -->
 
-<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fmathverse8897back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+
 </head>
+
 <body class="bg-background text-text-primary overflow-x-hidden">
 
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXL5MJQV"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXL5MJQV" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Mathematical Background Canvas -->
     <canvas id="mathematical-universe" class="fixed inset-0 w-full h-full z-0"></canvas>
-    
-   <!-- Navigation -->
+
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 p-6">
         <div class="flex justify-between items-center">
             <!-- Logo -->
             <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
                 <a href="landing_dimension_mathematical_hero.html">
                     <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
-                        <path d="M16 2L20 10H28L22 16L26 24L16 20L6 24L10 16L4 10H12L16 2Z"/>
-                        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                        <path d="M16 2L20 10H28L22 16L26 24L16 20L6 24L10 16L4 10H12L16 2Z" />
+                        <circle cx="16" cy="16" r="3" fill="currentColor" />
                     </svg>
                 </a>
             </div>
-            
-            
-           <!-- Mathematical Symbol Navigation -->
-<div class="hidden md:flex space-x-6">
-  <a href="about_theorem_integration_of_self.html"
-     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
-     data-symbol="∫">
-    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∫</span>
-    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">About</span>
-  </a>
 
-  <a href="proficiencies_matrix_skills_visualization.html"
-     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
-     data-symbol="Δ">
-    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Δ</span>
-    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Skills</span>
-  </a>
 
-  <a href="works_gallery_sum_of_projects.html"
-     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
-     data-symbol="Σ">
-    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Σ</span>
-    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Works</span>
-  </a>
+            <!-- Mathematical Symbol Navigation -->
+            <div class="hidden md:flex space-x-6">
+                <a href="about_theorem_integration_of_self.html"
+                    class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+                    data-symbol="∫">
+                    <span
+                        class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∫</span>
+                    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">About</span>
+                </a>
 
-  <a href="reach_me_portal_infinite_connections.html"
-     class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
-     data-symbol="∞">
-    <span class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∞</span>
-    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Contact</span>
-  </a>
-</div>
+                <a href="proficiencies_matrix_skills_visualization.html"
+                    class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+                    data-symbol="Δ">
+                    <span
+                        class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Δ</span>
+                    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Skills</span>
+                </a>
+
+                <a href="works_gallery_sum_of_projects.html"
+                    class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+                    data-symbol="Σ">
+                    <span
+                        class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">Σ</span>
+                    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Works</span>
+                </a>
+
+                <a href="reach_me_portal_infinite_connections.html"
+                    class="nav-symbol group flex flex-col items-center relative p-3 rounded-lg transition-mathematical hover:bg-surface/20"
+                    data-symbol="∞">
+                    <span
+                        class="text-2xl font-jetbrains text-text-secondary group-hover:text-accent transition-mathematical">∞</span>
+                    <span class="text-xs opacity-0 group-hover:opacity-100 transition-mathematical mt-1">Contact</span>
+                </a>
+            </div>
 
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="md:hidden mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
+            <button id="mobile-menu-btn"
+                class="md:hidden mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-3">
                 <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
         </div>
-        
+
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="md:hidden absolute top-full left-0 right-0 bg-surface/90 backdrop-blur-mathematical rounded-lg m-6 p-6 opacity-0 transform -translate-y-4 transition-complex pointer-events-none">
+        <div id="mobile-menu"
+            class="md:hidden absolute top-full left-0 right-0 bg-surface/90 backdrop-blur-mathematical rounded-lg m-6 p-6 opacity-0 transform -translate-y-4 transition-complex pointer-events-none">
             <div class="space-y-4">
-                <a href="landing_dimension_mathematical_hero.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="landing_dimension_mathematical_hero.html"
+                    class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∫</span>
                     <span>Home</span>
                 </a>
-                <a href="about_theorem_integration_of_self.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="about_theorem_integration_of_self.html"
+                    class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∫</span>
                     <span>About Theorem</span>
                 </a>
-                <a href="proficiencies_matrix_skills_visualization.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="proficiencies_matrix_skills_visualization.html"
+                    class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">Δ</span>
                     <span>Skill Visualization</span>
                 </a>
@@ -117,40 +132,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="text-xl font-jetbrains">Σ</span>
                     <span>Works Gallery</span>
                 </a>
-                <a href="reach_me_portal_infinite_connections.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="reach_me_portal_infinite_connections.html"
+                    class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">∞</span>
                     <span>Reach Me Portal</span>
                 </a>
-                <a href="mathematical_playground_hidden_laboratory.html" class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
+                <a href="mathematical_playground_hidden_laboratory.html"
+                    class="flex items-center space-x-3 text-text-secondary hover:text-accent transition-mathematical">
                     <span class="text-xl font-jetbrains">π</span>
                     <span>Mathematical Playground</span>
                 </a>
             </div>
         </div>
     </nav>
-    
+
     <!-- Main Content -->
     <main class="relative z-20 pt-24">
         <!-- Hero Section -->
         <section class="container mx-auto px-6 py-16">
             <div class="text-center mb-16">
                 <div class="mb-8">
-                    <h1 class="text-5xl md:text-7xl font-jetbrains font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">
+                    <h1
+                        class="text-5xl md:text-7xl font-jetbrains font-bold text-transparent bg-clip-text bg-gradient-accent mb-4">
                         Σ Works Gallery
                     </h1>
                     <div class="text-xl md:text-2xl font-jetbrains text-text-secondary mb-4">
-                        <span class="text-accent">Σ</span> Projects = <span class="text-success">Innovation</span> + <span class="text-warning">Mathematics</span> + <span class="text-accent">Code</span>
+                        <span class="text-accent">Σ</span> Projects = <span class="text-success">Innovation</span> +
+                        <span class="text-warning">Mathematics</span> + <span class="text-accent">Code</span>
                     </div>
                 </div>
-                
+
                 <p class="text-lg md:text-xl text-text-secondary max-w-4xl mx-auto leading-relaxed">
-                    Each project represents a mathematical theorem brought to life through code. 
-                    Explore the intersection of <span class="text-accent font-medium">mathematical precision</span>, 
-                    <span class="text-success font-medium">technological innovation</span>, and 
+                    Each project represents a mathematical theorem brought to life through code.
+                    Explore the intersection of <span class="text-accent font-medium">mathematical precision</span>,
+                    <span class="text-success font-medium">technological innovation</span>, and
                     <span class="text-warning font-medium">creative problem-solving</span>.
                 </p>
             </div>
-            
+
             <!-- Filter Controls -->
             <div class="mb-12">
                 <div class="mathematical-glow bg-surface/30 backdrop-blur-mathematical rounded-lg p-6">
@@ -179,47 +198,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </section>
-        
+
         <!-- Projects Grid -->
         <section class="container mx-auto px-6 pb-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="projects-grid">
-                
+
                 <!-- Project 1: Fractal Geometry Visualizer -->
                 <article class="project-card" data-category="visualization creative">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fractal Geometry Visualization" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/12/13/05/15/fractal-1903998_1280.jpg'; this.onerror=null;" />
+                            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Fractal Geometry Visualization"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.pixabay.com/photo/2016/12/13/05/15/fractal-1903998_1280.jpg'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-accent/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-accent">
+                                <span
+                                    class="mathematical-glow bg-accent/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-accent">
                                     f(z) = z² + c
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-accent">Fractal Geometry Visualizer</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-accent">Fractal Geometry
+                                Visualizer</h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Interactive exploration of the Mandelbrot set and Julia sets using complex number mathematics. 
+                                Interactive exploration of the Mandelbrot set and Julia sets using complex number
+                                mathematics.
                                 Real-time rendering with zoom capabilities and color mapping algorithms.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Python</span>
                                 <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">NumPy</span>
-                                <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">Matplotlib</span>
+                                <span
+                                    class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">Matplotlib</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -227,43 +259,54 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
                 <!-- Project 2: Statistical Analysis Dashboard -->
                 <article class="project-card" data-category="visualization algorithm">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Statistical Analysis Dashboard" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="Statistical Analysis Dashboard"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-success/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-success">
+                                <span
+                                    class="mathematical-glow bg-success/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-success">
                                     σ² = Σ(x-μ)²/n
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-success">Statistical Analysis Dashboard</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-success">Statistical Analysis
+                                Dashboard</h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Comprehensive data analysis platform with real-time statistical computations, 
+                                Comprehensive data analysis platform with real-time statistical computations,
                                 hypothesis testing, and interactive visualizations for educational purposes.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">R</span>
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Shiny</span>
                                 <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">ggplot2</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -271,43 +314,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
                 <!-- Project 3: Prime Number Generator -->
                 <article class="project-card" data-category="algorithm education">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.pixabay.com/photo/2020/07/08/04/12/numbers-5382023_1280.jpg" alt="Prime Number Generator" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <img src="https://images.pixabay.com/photo/2020/07/08/04/12/numbers-5382023_1280.jpg"
+                                alt="Prime Number Generator"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-warning/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-warning">
+                                <span
+                                    class="mathematical-glow bg-warning/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-warning">
                                     p ∈ ℙ ⟺ ∀a,b ∈ ℕ: ab = p ⟹ a = 1 ∨ b = 1
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-warning">Prime Number Generator</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-warning">Prime Number Generator
+                            </h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Efficient implementation of the Sieve of Eratosthenes with optimizations for large number ranges. 
+                                Efficient implementation of the Sieve of Eratosthenes with optimizations for large
+                                number ranges.
                                 Includes visualization of prime distribution patterns and educational explanations.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">JavaScript</span>
+                                <span
+                                    class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">JavaScript</span>
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Canvas API</span>
-                                <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">Web Workers</span>
+                                <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">Web
+                                    Workers</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -315,43 +372,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
                 <!-- Project 4: Mathematical Art Generator -->
                 <article class="project-card" data-category="creative visualization">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mathematical Art Generator" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Mathematical Art Generator"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-accent/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-accent">
+                                <span
+                                    class="mathematical-glow bg-accent/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-accent">
                                     r = a + b·cos(nθ)
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-accent">Mathematical Art Generator</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-accent">Mathematical Art
+                                Generator</h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Generative art using parametric equations, polar coordinates, and trigonometric functions. 
+                                Generative art using parametric equations, polar coordinates, and trigonometric
+                                functions.
                                 Creates unique patterns based on mathematical relationships and user-defined parameters.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">p5.js</span>
                                 <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">WebGL</span>
                                 <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">SVG</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -359,43 +428,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
                 <!-- Project 5: Calculus Learning Platform -->
                 <article class="project-card" data-category="education algorithm">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Calculus Learning Platform" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                            <img src="https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                alt="Calculus Learning Platform"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-success/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-success">
+                                <span
+                                    class="mathematical-glow bg-success/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-success">
                                     ∫ f'(x)dx = f(x) + C
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-success">Calculus Learning Platform</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-success">Calculus Learning
+                                Platform</h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Interactive educational tool for learning calculus concepts through visual demonstrations. 
+                                Interactive educational tool for learning calculus concepts through visual
+                                demonstrations.
                                 Features step-by-step solutions, graphical representations, and practice problems.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">React</span>
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">MathJax</span>
                                 <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">D3.js</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -403,43 +484,56 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
                 <!-- Project 6: Neural Network Visualizer -->
                 <article class="project-card" data-category="algorithm visualization">
-                    <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
+                    <div
+                        class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden group hover:scale-105 transition-mathematical">
                         <div class="relative h-64 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Neural Network Visualizer" class="w-full h-full object-cover group-hover:scale-110 transition-mathematical" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2019/12/19/10/55/christmas-star-4707019_1280.jpg'; this.onerror=null;" />
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Neural Network Visualizer"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-mathematical"
+                                loading="lazy"
+                                onerror="this.src='https://images.pixabay.com/photo/2019/12/19/10/55/christmas-star-4707019_1280.jpg'; this.onerror=null;" />
                             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
                             <div class="absolute top-4 left-4">
-                                <span class="mathematical-glow bg-warning/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-warning">
+                                <span
+                                    class="mathematical-glow bg-warning/20 backdrop-blur-mathematical rounded-lg px-3 py-1 text-sm font-jetbrains text-warning">
                                     σ(x) = 1/(1+e^(-x))
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
-                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-warning">Neural Network Visualizer</h3>
+                            <h3 class="text-2xl font-jetbrains font-semibold mb-3 text-warning">Neural Network
+                                Visualizer</h3>
                             <p class="text-text-secondary mb-4 leading-relaxed">
-                                Interactive visualization of neural network architecture and training process. 
+                                Interactive visualization of neural network architecture and training process.
                                 Demonstrates backpropagation, activation functions, and weight adjustments in real-time.
                             </p>
-                            
+
                             <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">TensorFlow.js</span>
+                                <span
+                                    class="px-3 py-1 bg-warning/20 text-warning rounded-full text-sm">TensorFlow.js</span>
                                 <span class="px-3 py-1 bg-accent/20 text-accent rounded-full text-sm">Three.js</span>
-                                <span class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">TypeScript</span>
+                                <span
+                                    class="px-3 py-1 bg-success/20 text-success rounded-full text-sm">TypeScript</span>
                             </div>
-                            
+
                             <div class="flex space-x-4">
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-accent hover:text-accent-light transition-mathematical">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                        <path
+                                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
                                     <span>GitHub</span>
                                 </a>
-                                <a href="javascript:void(0)" class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center space-x-2 text-success hover:text-success/80 transition-mathematical">
                                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                                     </svg>
                                     <span>Live Demo</span>
                                 </a>
@@ -447,10 +541,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </article>
-                
+
             </div>
         </section>
-        
+
         <!-- Code Showcase Section -->
         <section class="container mx-auto px-6 py-16">
             <div class="text-center mb-12">
@@ -459,7 +553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     Explore the mathematical algorithms and implementations behind the projects
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Code Example 1 -->
                 <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden">
@@ -496,7 +590,7 @@ def generate_fractal(width, height, zoom=1, center=0):
     return fractal</code></pre>
                     </div>
                 </div>
-                
+
                 <!-- Code Example 2 -->
                 <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg overflow-hidden">
                     <div class="p-4 border-b border-success/20">
@@ -542,109 +636,119 @@ def generate_fractal(width, height, zoom=1, center=0):
                 </div>
             </div>
         </section>
-        
+
         <!-- Call to Action -->
         <section class="container mx-auto px-6 py-16 text-center">
             <div class="mathematical-glow bg-surface/20 backdrop-blur-mathematical rounded-lg p-12">
                 <h2 class="text-4xl font-jetbrains font-bold mb-6 text-accent">Ready to Collaborate?</h2>
                 <p class="text-lg text-text-secondary mb-8 max-w-2xl mx-auto">
-                    Let's solve complex problems together through the power of mathematics and code. 
+                    Let's solve complex problems together through the power of mathematics and code.
                     Every great theorem starts with a curious question.
                 </p>
-                
+
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="reach_me_portal_infinite_connections.html" class="inline-flex items-center space-x-3 mathematical-glow bg-gradient-accent text-primary px-8 py-4 rounded-lg font-space-grotesk font-semibold text-lg hover:scale-105 transition-mathematical group">
+                    <a href="reach_me_portal_infinite_connections.html"
+                        class="inline-flex items-center space-x-3 mathematical-glow bg-gradient-accent text-primary px-8 py-4 rounded-lg font-space-grotesk font-semibold text-lg hover:scale-105 transition-mathematical group">
                         <span>Start a Conversation</span>
-                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-mathematical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-mathematical" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
                     </a>
-                    
-                    <a href="mathematical_playground_hidden_laboratory.html" class="inline-flex items-center space-x-3 mathematical-glow bg-surface/30 backdrop-blur-mathematical text-accent px-8 py-4 rounded-lg font-space-grotesk font-semibold text-lg hover:scale-105 transition-mathematical group">
+
+                    <a href="mathematical_playground_hidden_laboratory.html"
+                        class="inline-flex items-center space-x-3 mathematical-glow bg-surface/30 backdrop-blur-mathematical text-accent px-8 py-4 rounded-lg font-space-grotesk font-semibold text-lg hover:scale-105 transition-mathematical group">
                         <span>Explore More</span>
-                        <svg class="w-5 h-5 group-hover:rotate-90 transition-mathematical" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        <svg class="w-5 h-5 group-hover:rotate-90 transition-mathematical" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                     </a>
                 </div>
             </div>
         </section>
     </main>
-    
+
     <!-- Mathematical Background Equations -->
     <div class="fixed inset-0 z-5 pointer-events-none overflow-hidden">
         <div class="absolute top-20 left-10 text-6xl font-jetbrains text-accent/10 animate-float">Σ(x²)</div>
-        <div class="absolute top-40 right-20 text-4xl font-jetbrains text-success/10 animate-float" style="animation-delay: 1s;">∇f = 0</div>
-        <div class="absolute bottom-40 left-20 text-5xl font-jetbrains text-warning/10 animate-float" style="animation-delay: 2s;">∫₀^∞ e^(-x²) dx</div>
-        <div class="absolute bottom-20 right-10 text-3xl font-jetbrains text-accent/10 animate-float" style="animation-delay: 0.5s;">lim(x→∞) f(x)</div>
+        <div class="absolute top-40 right-20 text-4xl font-jetbrains text-success/10 animate-float"
+            style="animation-delay: 1s;">∇f = 0</div>
+        <div class="absolute bottom-40 left-20 text-5xl font-jetbrains text-warning/10 animate-float"
+            style="animation-delay: 2s;">∫₀^∞ e^(-x²) dx</div>
+        <div class="absolute bottom-20 right-10 text-3xl font-jetbrains text-accent/10 animate-float"
+            style="animation-delay: 0.5s;">lim(x→∞) f(x)</div>
     </div>
 
     <script>
         // Mathematical Universe Background
         let scene, camera, renderer, particles;
-        
+
         function initMathematicalUniverse() {
             const canvas = document.getElementById('mathematical-universe');
             scene = new THREE.Scene();
             camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
             renderer.setSize(window.innerWidth, window.innerHeight);
-            
+
             // Create particle system
             const geometry = new THREE.BufferGeometry();
             const particleCount = 800;
             const positions = new Float32Array(particleCount * 3);
-            
+
             for (let i = 0; i < particleCount * 3; i++) {
                 positions[i] = (Math.random() - 0.5) * 100;
             }
-            
+
             geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-            
+
             const material = new THREE.PointsMaterial({
                 color: 0x00d4ff,
                 size: 0.3,
                 transparent: true,
                 opacity: 0.4
             });
-            
+
             particles = new THREE.Points(geometry, material);
             scene.add(particles);
-            
+
             camera.position.z = 50;
-            
+
             animate();
         }
-        
+
         function animate() {
             requestAnimationFrame(animate);
-            
+
             if (particles) {
                 particles.rotation.x += 0.0005;
                 particles.rotation.y += 0.001;
             }
-            
+
             renderer.render(scene, camera);
         }
-        
+
         // Filter Functionality
         function initFilters() {
             const filterBtns = document.querySelectorAll('.filter-btn');
             const projectCards = document.querySelectorAll('.project-card');
-            
+
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     // Update active filter
                     filterBtns.forEach(b => b.classList.remove('active'));
                     btn.classList.add('active');
-                    
+
                     const filter = btn.dataset.filter;
-                    
+
                     // Filter projects
                     projectCards.forEach(card => {
                         const categories = card.dataset.category.split(' ');
-                        
+
                         if (filter === 'all' || categories.includes(filter)) {
                             gsap.to(card, {
                                 opacity: 1,
@@ -668,16 +772,16 @@ def generate_fractal(width, height, zoom=1, center=0):
                 });
             });
         }
-        
+
         // Mobile Menu Toggle
         function initMobileMenu() {
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             let isOpen = false;
-            
+
             mobileMenuBtn.addEventListener('click', () => {
                 isOpen = !isOpen;
-                
+
                 if (isOpen) {
                     mobileMenu.style.pointerEvents = 'auto';
                     gsap.to(mobileMenu, {
@@ -699,28 +803,28 @@ def generate_fractal(width, height, zoom=1, center=0):
                 }
             });
         }
-        
+
         // Project Card Animations
         function initProjectAnimations() {
             const projectCards = document.querySelectorAll('.project-card');
-            
+
             // Intersection Observer for scroll animations
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        gsap.fromTo(entry.target, 
+                        gsap.fromTo(entry.target,
                             { opacity: 0, y: 50 },
                             { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
                         );
                     }
                 });
             }, { threshold: 0.1 });
-            
+
             projectCards.forEach(card => {
                 observer.observe(card);
             });
         }
-        
+
         // Code Syntax Highlighting
         function initCodeHighlighting() {
             // Prism.js will automatically highlight code blocks
@@ -728,7 +832,7 @@ def generate_fractal(width, height, zoom=1, center=0):
                 Prism.highlightAll();
             }
         }
-        
+
         // Resize Handler
         function handleResize() {
             if (camera && renderer) {
@@ -737,7 +841,7 @@ def generate_fractal(width, height, zoom=1, center=0):
                 renderer.setSize(window.innerWidth, window.innerHeight);
             }
         }
-        
+
         // Initialize Everything
         window.addEventListener('load', () => {
             initMathematicalUniverse();
@@ -746,81 +850,51 @@ def generate_fractal(width, height, zoom=1, center=0):
             initProjectAnimations();
             initCodeHighlighting();
         });
-        
+
         window.addEventListener('resize', handleResize);
-        
-        // Navigation hover effects
-document.querySelectorAll('.nav-symbol').forEach(symbol => {
-    symbol.addEventListener('mouseenter', () => {
-        gsap.to(symbol.querySelector('span:first-child'), {
-            scale: 1.2,
-            duration: 0.3,
-            ease: 'back.out(1.7)'
+
         });
-    });
-
-    symbol.addEventListener('mouseleave', () => {
-        gsap.to(symbol.querySelector('span:first-child'), {
-            scale: 1,
-            duration: 0.3,
-            ease: 'power2.out'
-        });
-    });
-});
-
-// Set active nav based on current page
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll('.nav-symbol');
-    const currentURL = window.location.href;
-
-    links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (currentURL.includes(href)) {
-            link.classList.add('active');
-            const symbolSpan = link.querySelector('span:first-child');
-            symbolSpan.classList.remove('text-text-secondary');
-            symbolSpan.classList.add('text-accent');
-        }
-    });
-});
 
     </script>
-    
+
     <style>
         .nav-symbol {
             @apply relative p-3 rounded-lg transition-mathematical hover:bg-surface/20;
         }
-        
+
         .filter-btn {
             @apply flex items-center px-4 py-2 rounded-lg bg-surface/20 text-text-secondary hover:text-accent transition-mathematical cursor-pointer;
         }
-        
+
         .filter-btn.active {
             @apply bg-accent/20 text-accent;
         }
-        
+
         .project-card {
             @apply opacity-0;
         }
-        
+
         #mathematical-universe {
             @apply opacity-20;
         }
-        
+
         @media (max-width: 768px) {
             #mathematical-universe {
                 @apply opacity-10;
             }
         }
-        
+
         /* Code block styling */
         pre[class*="language-"] {
             @apply bg-primary/50 rounded-lg;
         }
-        
+
         code[class*="language-"] {
             @apply text-sm;
         }
     </style>
+    <!-- Shared Navigation Module -->
+    <script src="../js/navigation.js"></script>
 </body>
+
 </html>
